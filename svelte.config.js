@@ -6,8 +6,8 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter({
-			// Alle Seiten werden statisch generiert
-			fallback: undefined
+			// SPA fallback für client-seitiges Routing
+			fallback: '200.html'
 		})
 	}
 };
