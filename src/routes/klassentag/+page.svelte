@@ -170,3 +170,14 @@
     />
   </div>
 </section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="mb-2">Kontakt</h2>
+    <div class="list">
+      <div class="list__item" style="background: #e7f3ff; padding: 12px; border-radius: 8px;">
+        <strong>📞 Notfallkontakt:</strong> Bei Notfällen oder anderen Zwischenfällen melden Sie sich am besten direkt bei der Klassenlehrperson Cedric Geissmann unter <a href="tel:+41797219271">+41 79 721 92 71</a>.
+      </div>
+    </div>
+  </div>
+</section>
