@@ -1,6 +1,7 @@
 <script>
   import { base } from '$app/paths';
   import HikeMap from '$lib/components/HikeMap.svelte';
+  import Weather from '$lib/components/Weather.svelte';
 </script>
 
 <svelte:head>
@@ -11,26 +12,41 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero__overlay"></div>
-  <img src={base + '/img/elsigenalp.jpg'} alt="Elsigenalp - Klassentag" class="hero__image" />
+  <img src={base + '/img/elsigenalp.jpg'} alt="Elsigenalp - Klassentag" class="hero__image hero__image--1" />
+  <img src={base + '/img/elsigenalp-see.jpg'} alt="Elsigenalp-See - Klassentag" class="hero__image hero__image--2" />
   <div class="hero__content">
     <h1 class="hero__title">Klassentag</h1>
     <p class="hero__subtitle">Auf zum Klassentag auf der Elsigenalp</p>
   </div>
 </section>
 
-<section class="section">
+<!-- Wetter für Klassentag -->
+<section class="section section--alt">
   <div class="container">
-    <h1>Klassentag</h1>
-    <p>Alle Informationen zum Klassentag der F1c.</p>
+    <h2 class="mb-2">🌤️ Wetter am Klassentag</h2>
+    <p class="mb-2">3-Tage-Wettervorhersage für den Klassentag am <strong>Dienstag, 25. August 2026</strong> auf der Elsigenalp:</p>
+    <div class="weather-grid">
+      <Weather 
+        locationName="Achseten" 
+        latitude={47.2556} 
+        longitude={7.7833} 
+        targetDate={new Date(2026, 7, 25)} 
+      />
+      <Weather 
+        locationName="Elsigenalp" 
+        latitude={47.2333} 
+        longitude={7.8167} 
+        targetDate={new Date(2026, 7, 25)} 
+      />
+    </div>
   </div>
 </section>
 
-<section class="section section--alt">
+<section class="section">
   <div class="container">
-    <h2 class="mb-2">Nächster Klassentag</h2>
     <div class="list">
       <div class="list__item">
-        <strong>Datum:</strong> Dienstag, 25. August 2025
+        <strong>Datum:</strong> Dienstag, 25. August 2026
       </div>
       <div class="list__item">
         <strong>Ort:</strong> Elsigenalp
@@ -47,13 +63,22 @@
     <h2 class="mb-2">ÖV-Informationen</h2>
     <div class="list">
       <div class="list__item">
-        <strong>Treffpunkt:</strong> 7:15 Basel SBB
+        <strong>Treffpunkt:</strong> 7:15 auf der Passerelle, Basel SBB
       </div>
       <div class="list__item">
         <strong>Abreise:</strong> 7:30 Basel SBB
       </div>
       <div class="list__item">
+        <a href="https://a.sbbmobile.ch/s/AgBWDzOC" target="_blank" rel="noopener noreferrer">📱 SBB Fahrplan Hinreise (Basel SBB → Achseten, Kirche)</a>
+      </div>
+      <div class="list__item">
         <strong>Ankunft:</strong> 16:29 Basel SBB
+      </div>
+      <div class="list__item">
+        <a href="https://a.sbbmobile.ch/s/J7hfiwet" target="_blank" rel="noopener noreferrer">📱 SBB Fahrplan Heimreise (Achseten, Kirche → Basel SBB)</a>
+      </div>
+      <div class="list__item" style="background: #fff3cd; padding: 12px; border-radius: 8px; margin-top: 8px;">
+        <strong>🎫 Tickets:</strong> Für die Anreise zum Basel SBB und für die Heimreise ab Basel SBB benötigen Sie bitte eigene Tickets. Ab Basel SBB stellen wir eine Gruppentageskarte der SBB zur Verfügung — hier müssen also keine weiteren Tickets gekauft werden.
       </div>
     </div>
   </div>
@@ -77,6 +102,23 @@
       </div>
       <div class="list__item">
         ☀️ Sonnenschutz
+      </div>
+      <div class="list__item">
+        👕 Trockene Kleidung für Heimreise
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="mb-2">Verpflegung</h2>
+    <div class="list">
+      <div class="list__item" style="background: #fff3cd; padding: 12px; border-radius: 8px;">
+        <strong>🍱 Verpflegung selbst mitbringen:</strong> Bitte bringen Sie für alle Mahlzeiten und Snacks selbst Sorge — sowohl für den Hinweg als auch für den Rückweg. Auf der Wanderung gibt es keine Einkaufsmöglichkeiten.
+      </div>
+      <div class="list__item">
+        <strong>☕ Kurz-Einkauf in Frutigen:</strong> Je nachdem, ob der Bus pünktlich am Bahnhof in Frutigen ankommt, haben Sie beim Umsteigen knapp 9 Minuten Zeit, um etwas zu kaufen. Dies ist jedoch nicht immer möglich — planen Sie bitte nicht fest damit.
       </div>
     </div>
   </div>
