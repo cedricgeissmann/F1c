@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:NGDIMKhZ_UJe67GjPsryN
+SUMMARY:07:30 Basel SBB - Achseten\, Kirche
+DTSTAMP:20260823T075310Z
+DTSTART:20260825T053000Z
+DTEND:20260825T074800Z
+DESCRIPTION:Reise: Basel SBB nach Achseten\, Kirche\n\nDatum: 25.08.2026\n-
+	\n\nAb 07:30 Basel SBB Gleis 7 (IC 61 611\, Richtung: Interlaken Ost)\nAn 
+	09:04 Spiez Gleis 1\n\nAb Spiez (8min Umsteigen)\nAn Spiez\n\nAb 09:12 Spi
+	ez Gleis 3CD (RE 1 4263\, Richtung: Brig)\nAn 09:24 Frutigen Gleis 3\n\nAb
+	 Frutigen (2min Umsteigen)\nAn Frutigen\, Bahnhof\n\nAb 09:32 Frutigen\, B
+	ahnhof Kante A (B 230\, Richtung: Adelboden\, Post)\nAn 09:48 Achseten\, K
+	irche  \n\n-\nDauer: 2 h 18 min\, Umsteigevorgänge 2\n\nFahrplan: Alle Ang
+	aben ohne Gewähr.\n\nhttps://www.sbb.ch/de?stops=Basel+SBB_I8500010%7EAchs
+	eten%2C+Kirche_I8507850&day=2026-08-25&time=07_30&moment=dep&trip=0_0
+LOCATION:Gleis 7 Basel SBB
+END:VEVENT
+END:VCALENDAR

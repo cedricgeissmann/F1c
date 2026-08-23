@@ -9,7 +9,14 @@ export const events = [
 		date: '25. August',
 		startDate: '2025-08-25',
 		description: 'Information zum Klassentag wird hier ergänzt.',
-		icon: '📅'
+		icon: '📅',
+		// Wander-Infos (optional)
+		hike: {
+			distance: '5.2 km',
+			elevationUp: '450 m',
+			elevationDown: '320 m',
+			estimatedTime: '2h 30min'
+		}
 	},
 	{
 		title: 'Klassenlager',

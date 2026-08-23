@@ -23,3 +23,16 @@ Thumbs.db
 
 # Biome
 .biome/
+
+# SvelteKit
+.svelte-kit/
+__svelte__/    # Output directory from sveltekit build
+
+# Vite
+.vite/           # Vite cache
+
+# Coverage
+coverage/
+
+# Local env files
+.env*.local
