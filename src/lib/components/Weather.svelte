@@ -17,7 +17,7 @@
     if (!targetDate) return;
 
     const startDate = today.toISOString().split('T')[0];
-    const endDate = new Date(today.getTime() + 3 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+    const endDate = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&start_date=${startDate}&end_date=${endDate}&daily=weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum,wind_speed_10m_max,wind_gusts_10m_max,precipitation_probability_max&timezone=Europe%2FBerlin&temperature_unit=celsius&wind_speed_unit=kmh&precipitation_unit=mm`;
 
     fetch(url)
@@ -96,7 +96,7 @@
 
   {#if weatherData && !loading}
     <div class="weather-card__forecast">
-      <p class="forecast-note">📅 3-Tage-Vorhersage</p>
+      <p class="forecast-note">📅 7-Tage-Vorhersage</p>
       <div class="forecast-grid">
         {#each weatherData.daily.time as day, i}
           {#if new Date(day) >= today}
