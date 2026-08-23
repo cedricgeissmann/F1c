@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import HikeMap from '$lib/components/HikeMap.svelte';
 </script>
 
@@ -10,7 +11,7 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero__overlay"></div>
-  <img src="{$base}/img/elsigenalp.jpg" alt="Elsigenalp - Klassentag" class="hero__image" />
+  <img src={base + '/img/elsigenalp.jpg'} alt="Elsigenalp - Klassentag" class="hero__image" />
   <div class="hero__content">
     <h1 class="hero__title">Klassentag</h1>
     <p class="hero__subtitle">Auf zum Klassentag auf der Elsigenalp</p>
@@ -88,7 +89,7 @@
     <h3 class="mb-2">1. Aufstieg</h3>
     <p>Der Aufstieg ist der erste Teil, den die ganze Klasse gemeinsam geht.</p>
     <HikeMap
-      gpxUrl="{$base}/gpx/kt-aufstieg.gpx"
+      gpxUrl={base + '/gpx/kt-aufstieg.gpx'}
       title="Aufstieg zur Elsigenalp"
       distance="2.9 km"
       elevationUp="497 m"
@@ -103,7 +104,7 @@
     <h2 class="mb-2">2. Abstieg</h2>
     <p>Je nach Zeit oder Wetter überspringen wir diesen Teil und fahren mit der Bahn runter.</p>
     <HikeMap
-      gpxUrl="{$base}/gpx/kt-abstieg-01.gpx"
+      gpxUrl={base + '/gpx/kt-abstieg-01.gpx'}
       title="Abstieg nach Elsigbach"
       distance="2.7 km"
       elevationUp="6 m"
@@ -118,7 +119,7 @@
     <h2 class="mb-2">3. Rückweg zum Bus</h2>
     <p>Dieses Stück müssen wir evtl. sehr schnell laufen können, denn wir müssen die Busverbindung erwischen.</p>
     <HikeMap
-      gpxUrl="{$base}/gpx/kt-abstieg-02.gpx"
+      gpxUrl={base + '/gpx/kt-abstieg-02.gpx'}
       title="Rückweg zum Bus"
       distance="2.0 km"
       elevationUp="8 m"
