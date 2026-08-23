@@ -37,6 +37,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Rename 200.html to index.html für GitHub Pages
+      - name: Rename fallback to index.html
+        run: mv build/200.html build/index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

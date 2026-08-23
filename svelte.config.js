@@ -8,7 +8,11 @@ const config = {
 		adapter: adapter({
 			// SPA fallback für client-seitiges Routing
 			fallback: '200.html'
-		})
+		}),
+		// Pfad für GitHub Pages
+		paths: {
+			base: '/F1c'
+		}
 	}
 };
 
