@@ -37,9 +37,11 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Rename 200.html to index.html für GitHub Pages
-      - name: Rename fallback to index.html
-        run: mv build/200.html build/index.html
+      # 200.html ist die SvelteKit App - als index.html UND 404.html
+      - name: Prepare for GitHub Pages
+        run: |
+          cp build/200.html build/index.html
+          cp build/200.html build/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
