@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores';
+  import { base } from '$app/paths';
   import { onMount } from 'svelte';
   import '../app.css';
 
@@ -16,7 +17,7 @@
 
 <nav class="nav">
   <div class="nav__container">
-    <a href="/" class="nav__logo">F1c</a>
+    <a href={base + '/'} class="nav__logo">F1c</a>
 
     <button
       class="nav__toggle"
@@ -33,7 +34,7 @@
       <ul class="nav__list">
         <li class="nav__item">
           <a
-            href="/"
+            href={base + '/'}
             class="nav__link"
             on:click={closeMenu}
           >
@@ -42,7 +43,7 @@
         </li>
         <li class="nav__item">
           <a
-            href="/die-klasse"
+            href={base + '/die-klasse'}
             class="nav__link"
             on:click={closeMenu}
           >
@@ -51,7 +52,7 @@
         </li>
         <li class="nav__item">
           <a
-            href="/klassentag"
+            href={base + '/klassentag'}
             class="nav__link"
             on:click={closeMenu}
           >
@@ -60,7 +61,7 @@
         </li>
         <li class="nav__item">
           <a
-            href="/klassenlager"
+            href={base + '/klassenlager'}
             class="nav__link"
             on:click={closeMenu}
           >
