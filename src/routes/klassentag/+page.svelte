@@ -24,19 +24,21 @@
 <section class="section section--alt">
   <div class="container">
     <h2 class="mb-2">🌤️ Wetter am Klassentag</h2>
-    <p class="mb-2">3-Tage-Wettervorhersage für den Klassentag am <strong>Dienstag, 25. August 2026</strong> auf der Elsigenalp:</p>
+    <p class="mb-2">2-Tage-Wettervorhersage für den Klassentag am <strong>Dienstag, 25. August 2026</strong> auf der Elsigenalp:</p>
     <div class="weather-grid">
       <Weather 
         locationName="Achseten" 
         latitude={47.2556} 
         longitude={7.7833} 
         targetDate={new Date(2026, 7, 25)} 
+        daysAhead={2} 
       />
       <Weather 
         locationName="Elsigenalp" 
         latitude={47.2333} 
         longitude={7.8167} 
         targetDate={new Date(2026, 7, 25)} 
+        daysAhead={2} 
       />
     </div>
   </div>
