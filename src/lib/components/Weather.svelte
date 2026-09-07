@@ -6,6 +6,7 @@
   export let longitude = 0;
   export let targetDate = null;
   export let daysAhead = 7;
+  export let compact = false;
 
   let weatherData = null;
   let loading = true;
@@ -96,11 +97,13 @@
   </div>
 
   {#if weatherData && !loading}
+    {@const upcomingDays = weatherData.daily.time
+      .map((day, i) => ({ day, i }))
+      .filter(({ day }) => new Date(day) >= today)}
     <div class="weather-card__forecast">
-      <p class="forecast-note">📅 {daysAhead}-Tage-Vorhersage</p>
+      <p class="forecast-note">📅 {compact ? 'Aktuelles Wetter' : `${daysAhead}-Tage-Vorhersage`}</p>
       <div class="forecast-grid">
-        {#each weatherData.daily.time as day, i}
-          {#if new Date(day) >= today}
+        {#each (compact ? upcomingDays.slice(0, 1) : upcomingDays) as { day, i }}
             <div class="forecast-day">
             <span class="forecast-day__date">{formatDateDisplay(day)}</span>
             <span class="forecast-day__icon">{getWeatherIcon(weatherData.daily.weather_code[i])}</span>
@@ -111,7 +114,6 @@
               🌧️ {formatPrecipitation(weatherData.daily.precipitation_sum[i])}
             </span>
           </div>
-          {/if}
         {/each}
       </div>
     </div>
@@ -219,6 +221,4 @@
     color: var(--color-text-light);
     margin-left: auto;
   }
-
-
 </style>
